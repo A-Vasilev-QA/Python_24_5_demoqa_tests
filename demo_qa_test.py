@@ -1,13 +1,9 @@
 from pathlib import Path
 
 from selene import be, browser, have
-from selenium.webdriver.chrome.options import Options
 
 
 def test_demo_qa():
-    options = Options()
-    options.add_argument("--window-size=1920,1080")
-    browser.config.driver_options = options
 
     browser.open("https://demoqa.com/automation-practice-form")
 
