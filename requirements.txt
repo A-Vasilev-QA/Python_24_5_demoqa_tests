@@ -1,0 +1,6 @@
+pytest
+selene
+#DEV
+black
+isort
+pre-commit
