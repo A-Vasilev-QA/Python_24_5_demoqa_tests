@@ -5,8 +5,6 @@ from selenium.webdriver.chrome.options import Options
 
 
 def test_demo_qa():
-    file_path = Path("img/1.jpg").resolve()
-
     options = Options()
     options.add_argument("--window-size=1920,1080")
     browser.config.driver_options = options
@@ -32,7 +30,7 @@ def test_demo_qa():
     browser.element(".react-datepicker__day.react-datepicker__day--009").click()
     browser.element("#subjectsInput").type("Computer").press_enter()
     browser.element("#hobbies-checkbox-1").element("..").click()
-    browser.element("#uploadPicture").set_value(str(file_path))
+    browser.element("#uploadPicture").set_value(str(Path("img/1.jpg").resolve()))
     browser.element("#currentAddress").type("Another str. 11")
     browser.element("#state").click()
     browser.element("#stateCity-wrapper").element('.//*[text()="NCR"]').click()
